@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='head'>
         <h1>Lista Manga</h1>
       </div>
       <form onSubmit={addManga}>
@@ -39,6 +39,7 @@ function App() {
         <hr />
 
         <input type="text"
+          value={newManga}
           // placeholder='Aggiungi'
           onChange={event => setNewManga(event.target.value)}
         />
