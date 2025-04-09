@@ -12,6 +12,12 @@ function App() {
     event.preventDefault();
     const newMangaList = [...mangaArray, newManga];
     setMangaArray(newMangaList);
+    setNewManga('');
+  }
+
+  const deleteManga = (indexToDelete) => {
+    const newMangaArray = mangaArray.filter((manga, index) => indexToDelete !== index)
+    setMangaArray(newMangaArray);
   }
 
   return (
@@ -25,7 +31,7 @@ function App() {
           {mangaArray.map((manga, index) =>
             <li key={index}>
               <h3>{manga}</h3>
-              <i className="fa-solid fa-trash" type='button' onClick={() => console.log("ho eliminato")}> Delete Manga</i>
+              <i className="fa-solid fa-trash" type='button' onClick={deleteManga}> Delete Manga</i>
             </li>)
           }
 
@@ -36,6 +42,7 @@ function App() {
           // placeholder='Aggiungi'
           onChange={event => setNewManga(event.target.value)}
         />
+        <button type="submit">Aggiungi Manga</button>
       </form>
     </>
   )
