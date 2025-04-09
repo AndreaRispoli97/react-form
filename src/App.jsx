@@ -24,7 +24,8 @@ function App() {
         <ul>
           {mangaArray.map((manga, index) =>
             <li key={index}>
-              {manga}
+              <h3>{manga}</h3>
+              <i className="fa-solid fa-trash" type='button' onClick={() => console.log("ho eliminato")}> Delete Manga</i>
             </li>)
           }
 
