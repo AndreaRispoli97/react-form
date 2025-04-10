@@ -16,12 +16,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-}
-
-
-form {
   text-align: center;
 }
+
+
+/* form {
+  text-align: center;
+} */
 
 ul {
   padding: 35px;
